@@ -1,6 +1,6 @@
 <?php
 
-namespace aspsierra\phpBasicFw\core\exception;
+namespace aspsierra\phpBasicFw\exception;
 
 class ForbiddenException extends \Exception{
     protected $code = 403;

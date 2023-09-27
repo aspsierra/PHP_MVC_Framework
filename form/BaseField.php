@@ -1,8 +1,8 @@
 <?php
 
-namespace aspsierra\phpBasicFw\core\form;
+namespace aspsierra\phpBasicFw\form;
 
-use aspsierra\phpBasicFw\core\Model;
+use aspsierra\phpBasicFw\Model;
 
 abstract class BaseField{
 

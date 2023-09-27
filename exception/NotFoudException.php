@@ -1,6 +1,6 @@
 <?php
 
-namespace aspsierra\phpBasicFw\core\exception;
+namespace aspsierra\phpBasicFw\exception;
 
 class NotFoudException extends \Exception{
     protected $code = 404;

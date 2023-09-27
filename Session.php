@@ -1,6 +1,6 @@
 <?php
 
-namespace aspsierra\phpBasicFw\core;
+namespace aspsierra\phpBasicFw;
 
 /**
  * handle sessions

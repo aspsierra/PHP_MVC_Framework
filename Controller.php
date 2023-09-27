@@ -1,8 +1,8 @@
 <?php
 
-namespace aspsierra\phpBasicFw\core;
+namespace aspsierra\phpBasicFw;
 
-use aspsierra\phpBasicFw\core\middlewares\Middleware;
+use aspsierra\phpBasicFw\middlewares\Middleware;
 /**
  * Controlador básico
  */

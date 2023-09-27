@@ -1,15 +1,15 @@
 <?php
 
-namespace aspsierra\phpBasicFw\core;
+namespace aspsierra\phpBasicFw;
 
-use aspsierra\phpBasicFw\core\Router;
-use aspsierra\phpBasicFw\core\Request;
-use aspsierra\phpBasicFw\core\Response;
-use aspsierra\phpBasicFw\core\Controller;
-use aspsierra\phpBasicFw\core\database\Database;
-use aspsierra\phpBasicFw\core\Session;
-use aspsierra\phpBasicFw\core\database\DbModel;
-use aspsierra\phpBasicFw\core\View;
+use aspsierra\phpBasicFw\Router;
+use aspsierra\phpBasicFw\Request;
+use aspsierra\phpBasicFw\Response;
+use aspsierra\phpBasicFw\Controller;
+use aspsierra\phpBasicFw\database\Database;
+use aspsierra\phpBasicFw\Session;
+use aspsierra\phpBasicFw\database\DbModel;
+use aspsierra\phpBasicFw\View;
 
 /**
  * Logica principal de la app

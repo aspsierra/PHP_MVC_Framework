@@ -1,6 +1,6 @@
 <?php
 
-namespace aspsierra\phpBasicFw\core\middlewares;
+namespace aspsierra\phpBasicFw\middlewares;
 
 abstract class Middleware{    
     abstract public function execute();

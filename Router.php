@@ -1,9 +1,9 @@
 <?php
 
-namespace aspsierra\phpBasicFw\core;
+namespace aspsierra\phpBasicFw;
 
-use aspsierra\phpBasicFw\core\Application;
-use aspsierra\phpBasicFw\core\exception\NotFoudException;
+use aspsierra\phpBasicFw\Application;
+use aspsierra\phpBasicFw\exception\NotFoudException;
 
 class Router
 {
