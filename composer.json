@@ -1,0 +1,16 @@
+{
+    "name": "aspsierra/php-mvc-fw",
+    "description": "Self made basic framework",
+    "autoload": {
+        "psr-4": {
+            "Aspsierra\\PhpMvcFw\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Álvaro Sierra",
+            "email": "asp.sierra@gmail.com"
+        }
+    ],
+    "require": {}
+}
