@@ -1,5 +1,5 @@
 {
-    "name": "aspsierra/php-mvc-fw",
+    "name": "aspsierra/php-basic-fw",
     "description": "Self made basic framework",
     "autoload": {
         "psr-4": {
