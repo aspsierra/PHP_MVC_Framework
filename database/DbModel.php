@@ -1,9 +1,9 @@
 <?php
 
-namespace aspfw\app\core\database;
+namespace aspsierra\phpBasicFw\core\database;
 
-use aspfw\app\core\Model;
-use aspfw\app\core\Application;
+use aspsierra\phpBasicFw\core\Model;
+use aspsierra\phpBasicFw\core\Application;
 
 abstract class DbModel extends Model
 {

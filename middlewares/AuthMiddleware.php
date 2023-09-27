@@ -1,10 +1,10 @@
 <?php
 
-namespace aspfw\app\core\middlewares;
+namespace aspsierra\phpBasicFw\core\middlewares;
 
-use aspfw\app\core\Application;
-use aspfw\app\core\exception\ForbiddenException;
-use aspfw\app\core\middlewares\Middleware;
+use aspsierra\phpBasicFw\core\Application;
+use aspsierra\phpBasicFw\core\exception\ForbiddenException;
+use aspsierra\phpBasicFw\core\middlewares\Middleware;
 
 class AuthMiddleware extends Middleware
 {

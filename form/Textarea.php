@@ -1,7 +1,7 @@
 <?php
-namespace aspfw\app\core\form;
+namespace aspsierra\phpBasicFw\core\form;
 
-use aspfw\app\core\form\BaseField;
+use aspsierra\phpBasicFw\core\form\BaseField;
 
 class Textarea extends BaseField{
     public function renderInput(): string

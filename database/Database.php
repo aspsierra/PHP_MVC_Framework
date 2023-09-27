@@ -1,8 +1,8 @@
 <?php
 
-namespace aspfw\app\core\database;
+namespace aspsierra\phpBasicFw\core\database;
 
-use aspfw\app\core\Application;
+use aspsierra\phpBasicFw\core\Application;
 
 class Database
 {

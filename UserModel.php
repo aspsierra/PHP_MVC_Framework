@@ -1,8 +1,8 @@
 <?php
 
-namespace aspfw\app\core;
+namespace aspsierra\phpBasicFw\core;
 
-use aspfw\app\core\database\DbModel;
+use aspsierra\phpBasicFw\core\database\DbModel;
 
 abstract class UserModel extends DbModel
 {

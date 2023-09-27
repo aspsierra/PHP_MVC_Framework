@@ -1,8 +1,8 @@
 <?php
 
-namespace aspfw\app\core\form;
+namespace aspsierra\phpBasicFw\core\form;
 
-use aspfw\app\core\Model;
+use aspsierra\phpBasicFw\core\Model;
 
 class Form{
     public static function begin($action, $method){

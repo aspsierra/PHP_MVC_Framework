@@ -1,6 +1,6 @@
 <?php
 
-namespace aspfw\app\core;
+namespace aspsierra\phpBasicFw\core;
 
 class Request
 {

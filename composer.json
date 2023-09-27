@@ -3,7 +3,7 @@
     "description": "Self made basic framework",
     "autoload": {
         "psr-4": {
-            "Aspsierra\\PhpMvcFw\\": "src/"
+            "aspsierra\\phpBasicFw\\": "."
         }
     },
     "authors": [
