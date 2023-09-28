@@ -54,6 +54,23 @@ abstract class DbModel extends Model
         $statement->execute();
         return $statement->fetchObject(static::class);
     }
+    /**
+     * Retrieve data from db
+     * @param   array  $where   values to select data
+     * @param   string  $opt    option, (AND or OR)
+     *
+     * @return  [type]          [return description]
+     */
+    public static function select($where, string $opt = ""){
+        $tableName = static::tableName();
+        $attributes = array_keys($where);
+        $sql = implode(" $opt ", array_map(fn ($attr) => "$attr = :" . $attr, $attributes));
+        $statement = self::prepare("SELECT * FROM $tableName WHERE $sql");
+        foreach ($where as $key => $item) {
+            $statement->bindValue(":$key", $item);
+        }
+        $statement->execute();
+    }
 
     /**
      * Prepare a given sql statement
