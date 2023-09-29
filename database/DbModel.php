@@ -7,6 +7,7 @@ use aspsierra\phpBasicFw\Application;
 
 abstract class DbModel extends Model
 {
+    public static string $sql = '';
     /**
      * Table's name in DB
      * @return  string
@@ -61,7 +62,7 @@ abstract class DbModel extends Model
      *
      * @return  [type]          [return description]
      */
-    public static function select($where, string $opt = ""){
+    /*public static function select($where, string $opt = ""){
         $data = [];
         $tableName = static::tableName();
         $attributes = array_keys($where);
@@ -75,12 +76,66 @@ abstract class DbModel extends Model
             array_push($data, $row);
         }
         return $data;
+    }*/
+    /**
+     * Build a Select statement
+     * @param   mixed  $attr  attributes to search
+     */
+    public static function select($attr)
+    {
+        $sql = "SELECT ";
+        if (empty($attr)) {
+            $sql .= " * ";
+        } else {
+            $attr = func_get_args();
+            $sql .= '(' . implode(', ', $attr)  . ') ';
+        }
+        self::$sql = $sql;
+    }
+
+    /**
+     * Choosing table
+     * @param   string  $table  table's name
+     */
+    public static function from($table = "")
+    {
+        self::$sql .= "FROM " . $table . " ";
+    }
+    /**
+     * Searching conditions
+     * @param   string  $key    attribute name
+     * @param   string  $value  value to compare
+     * @param   string  $op     operation to do
+     */
+    public static function where($key, $value, $op = '=')
+    {
+        self::$sql .= "WHERE $key $op $value";
+    }
+
+    /**
+     * Obtain the data with the specified conditions
+     * @param   string  $className  modle to apply
+     * @return  array               retrieved data
+     */
+    public static function get($className)
+    {
+        try {
+            $data = [];
+            $statement = self::prepare(self::$sql);
+            $statement->execute();
+            while ($row = $statement->fetchObject($className)) {
+                $data[] = $row;
+            }
+            return ($data);
+        } catch (\Exception $ex) {
+            throw new \Exception("Error en la operación", 55);
+        }
     }
 
     /**
      * Prepare a given sql statement
      * @param   string  $sql  [$sql description]
-     * @return  mixed
+     * @return  pdo
      */
     public static function prepare($sql)
     {
