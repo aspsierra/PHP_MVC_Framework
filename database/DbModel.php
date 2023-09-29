@@ -62,6 +62,7 @@ abstract class DbModel extends Model
      * @return  [type]          [return description]
      */
     public static function select($where, string $opt = ""){
+        $data = [];
         $tableName = static::tableName();
         $attributes = array_keys($where);
         $sql = implode(" $opt ", array_map(fn ($attr) => "$attr = :" . $attr, $attributes));
@@ -70,6 +71,10 @@ abstract class DbModel extends Model
             $statement->bindValue(":$key", $item);
         }
         $statement->execute();
+        while ($row = $statement->fetchObject(static::class)){
+            array_push($data, $row);
+        }
+        return $data;
     }
 
     /**
